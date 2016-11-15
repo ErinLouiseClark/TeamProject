@@ -1,8 +1,8 @@
-
+import java.util.*;
 public class TeamProjectRunner {
 
-	public static void main(String[] args) {
-		
+	public void main(String[] args) {
+		welcomeUser();
 
 	}
 	
@@ -12,6 +12,21 @@ public class TeamProjectRunner {
 				+ "1) add or delete a student"
 				+ "2) change a student's grade or schedule"
 				+ "3) sort students");
+		Scanner userInput = new Scanner(System.in);
+		int task = userInput.nextInt();
+		if(task == 1){
+			
+		}
+		else if(task == 2){
+			
+		}
+		else if(task == 3){
+			
+		}
+		else{
+			System.out.println("That is an invalid option! Try again.");
+			welcomeUser();
+		}
 	}
 
 }
