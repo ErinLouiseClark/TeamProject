@@ -1,13 +1,10 @@
 import java.util.*;
 public class TeamProjectRunner {
 
-<<<<<<< HEAD
-	public static void main(String[] args) {
-=======
+
 	static Scanner file = new Scanner("studentInformation.txt");
 	
 	public static void main(String[] args) {	
->>>>>>> mainMenu
 		welcomeUser();
 		//test
 	}
