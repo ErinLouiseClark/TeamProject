@@ -1,9 +1,11 @@
 import java.util.*;
+import java.io.*;
 public class TeamProjectRunner {
 
-	static Scanner file = new Scanner("studentInformation.txt");
+	static Scanner file;
 	
-	public static void main(String[] args) {	
+	public static void main(String[] args) throws IOException {	
+		file = new Scanner(new File("studentInformation.txt"));
 		welcomeUser();
 		//test
 	}

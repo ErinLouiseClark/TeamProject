@@ -42,16 +42,16 @@ public class addOrDelete {
 		System.out.println("Enter the first name of the student.");
 		Scanner userInput2 = new Scanner(System.in);
 		String testName = userInput2.nextLine();
-		for(String s : studentRoster){
-			if(s.contains(testName) == true){
+		for(int i = 0; i < studentRoster.size(); i++){
+			if(studentRoster.get(i).contains(testName) == true){
 				System.out.println("Is this the correct student? Enter 1 for yes and 2 for no.");
-				System.out.println(s);
+				System.out.println(studentRoster.get(i));
 				Scanner userInput3 = new Scanner(System.in);
 				int correct = userInput3.nextInt();
 				if(correct == 1){
 					studentRoster.remove(counter);
 					System.out.println("The student has been removed from the roster. Here is the new roster: ");
-					for(String s2 : studentRoster){
+					for(String s : studentRoster){
 						System.out.println(s);
 					}
 				}
