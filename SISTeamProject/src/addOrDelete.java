@@ -28,12 +28,31 @@ public class addOrDelete {
 	}
 	
 	public static void addStudent() {
-		
+		System.out.println("Enter the first name of the student.");
+		Scanner userInput = new Scanner(System.in);
+		String firstName = userInput.nextLine();
+		System.out.println("Enter the last name of the student.");
+		Scanner userInput2 = new Scanner(System.in);
+		String lastName = userInput.nextLine();
+		System.out.println("Enter the student's first class.");
+		Scanner userInput3 = new Scanner(System.in);
+		String firstClass = userInput.nextLine();
+		System.out.println("Enter the student's second class.");
+		Scanner userInput4 = new Scanner(System.in);
+		String secondClass = userInput.nextLine();
+		System.out.println("Enter the student's last class.");
+		Scanner userInput5 = new Scanner(System.in);
+		String thirdClass = userInput.nextLine();
+		TeamProjectRunner.studentRoster.add(firstName + " " + lastName + " " + firstClass + " " + secondClass + " " + thirdClass);
+		System.out.println("Here is the new roster:");
+		for(String s : TeamProjectRunner.studentRoster){
+			System.out.println(s);
+		}
 	}
 	
 	public static void deleteStudent() {
 		int counter = 0;
-		System.out.println("Enter the first name of the student.");
+		System.out.println("Enter the name of the student.");
 		Scanner userInput2 = new Scanner(System.in);
 		String testName = userInput2.nextLine();
 		for(int i = 0; i < TeamProjectRunner.studentRoster.size(); i++){
