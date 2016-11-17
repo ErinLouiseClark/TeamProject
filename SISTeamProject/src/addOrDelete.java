@@ -2,7 +2,6 @@ import java.util.*;
 import java.util.concurrent.SynchronousQueue;
 public class addOrDelete {
 
-	static ArrayList<String> studentRoster = new ArrayList<String>();
 	
 	public static void askUser() {
 		System.out.println("Would you like to add or delete a student?");
@@ -12,12 +11,7 @@ public class addOrDelete {
 		Scanner userInput = new Scanner(System.in);
 		int temp = userInput.nextInt();
 		
-		while(TeamProjectRunner.file.hasNext()){
-			
-			studentRoster.add(TeamProjectRunner.file.nextLine());		
 		
-		}
-			
 		if (temp == 1) {
 			addStudent();
 		}
@@ -42,16 +36,16 @@ public class addOrDelete {
 		System.out.println("Enter the first name of the student.");
 		Scanner userInput2 = new Scanner(System.in);
 		String testName = userInput2.nextLine();
-		for(int i = 0; i < studentRoster.size(); i++){
-			if(studentRoster.get(i).contains(testName) == true){
+		for(int i = 0; i < TeamProjectRunner.studentRoster.size(); i++){
+			if(TeamProjectRunner.studentRoster.get(i).contains(testName) == true){
 				System.out.println("Is this the correct student? Enter 1 for yes and 2 for no.");
-				System.out.println(studentRoster.get(i));
+				System.out.println(TeamProjectRunner.studentRoster.get(i));
 				Scanner userInput3 = new Scanner(System.in);
 				int correct = userInput3.nextInt();
 				if(correct == 1){
-					studentRoster.remove(counter);
+					TeamProjectRunner.studentRoster.remove(counter);
 					System.out.println("The student has been removed from the roster. Here is the new roster: ");
-					for(String s : studentRoster){
+					for(String s : TeamProjectRunner.studentRoster){
 						System.out.println(s);
 					}
 				}

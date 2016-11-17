@@ -3,9 +3,13 @@ import java.io.*;
 public class TeamProjectRunner {
 
 	static Scanner file;
+	static ArrayList<String> studentRoster = new ArrayList<String>();
 	
 	public static void main(String[] args) throws IOException {	
 		file = new Scanner(new File("studentInformation.txt"));
+		while(TeamProjectRunner.file.hasNext()){
+			studentRoster.add(TeamProjectRunner.file.nextLine());		
+		}			
 		welcomeUser();
 		//test
 	}
