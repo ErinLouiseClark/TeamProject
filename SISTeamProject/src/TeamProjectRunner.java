@@ -2,12 +2,6 @@ import java.util.*;
 import java.io.*;
 public class TeamProjectRunner {
 
-<<<<<<< HEAD
-
-	static Scanner file = new Scanner("studentInformation.txt");
-	
-	public static void main(String[] args) {	
-=======
 	static Scanner file;
 	static ArrayList<String> studentRoster = new ArrayList<String>();
 	
@@ -16,7 +10,6 @@ public class TeamProjectRunner {
 		while(TeamProjectRunner.file.hasNext()){
 			studentRoster.add(TeamProjectRunner.file.nextLine());		
 		}			
->>>>>>> b0c63d46e0add109fb995929bd475752d5d2d33d
 		welcomeUser();
 		//test
 	}
