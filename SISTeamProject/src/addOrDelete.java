@@ -56,7 +56,7 @@ public class addOrDelete {
 		Scanner userInput2 = new Scanner(System.in);
 		String testName = userInput2.nextLine();
 		for(int i = 0; i < TeamProjectRunner.studentRoster.size(); i++){
-			if(TeamProjectRunner.studentRoster.get(i).contains(testName) == true){
+			if(TeamProjectRunner.studentRoster.get(i).toLowerCase().contains(testName.toLowerCase()) == true){
 				System.out.println("Is this the correct student? Enter 1 for yes and 2 for no.");
 				System.out.println(TeamProjectRunner.studentRoster.get(i));
 				Scanner userInput3 = new Scanner(System.in);
@@ -70,9 +70,23 @@ public class addOrDelete {
 				}
 				else if (correct > 2 || correct < 1) {
 					deleteStudent();
-				}	
+				}
+				else{
+					if((i+1)<TeamProjectRunner.studentRoster.size()){
+						i = i;
+					}
+					else{
+						System.out.println("There is no student with that name. Try again.");
+						deleteStudent();
+					}
+				}
+			}
+			else{
+				System.out.println("There is not a student with that name in the roster. Try again.");
+				deleteStudent();
 			}
 			counter++;
+			//comment2
 		}
 	}
 }
