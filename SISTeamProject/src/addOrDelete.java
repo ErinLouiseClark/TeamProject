@@ -86,6 +86,7 @@ public class addOrDelete {
 				deleteStudent();
 			}
 			counter++;
+			//comment2
 		}
 	}
 }
