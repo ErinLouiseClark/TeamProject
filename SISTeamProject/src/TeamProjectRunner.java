@@ -3,7 +3,8 @@ import java.io.*;
 public class TeamProjectRunner {
 
 	static Scanner file;
-	static ArrayList<Student> studentRoster = new ArrayList<Student>();
+	static ArrayList<String> studentRoster = new ArrayList<String>();
+	static ArrayList<Student> register=new ArrayList<Student>();
 	public static void main(String[] args) throws IOException 
 	{	
 		getInformation();
@@ -23,8 +24,8 @@ public class TeamProjectRunner {
 			String sG=file.next();
 			String tC=file.next();
 			String tG=file.next();
-			studentRoster.add(new Student(fN,lN,fC,sG,sC,sG,tC,tG));
-			System.out.println("Student"+(i+1)+": "+studentRoster.get(i));
+			register.add(new Student(fN,lN,fC,sG,sC,sG,tC,tG));
+			//System.out.println("Student"+(i+1)+": "+register.get(i));
 			i++;
 		}			
 	}

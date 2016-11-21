@@ -14,18 +14,18 @@ public class SortStudent
 		int choice=scan.nextInt();
 		if(choice==1)
 		{
-			Collections.sort(TeamProjectRunner.studentRoster, new NameSorter());
-			for(int i=0; i<TeamProjectRunner.studentRoster.size();i++)
+			Collections.sort(TeamProjectRunner.register, new NameSorter());
+			for(int i=0; i<TeamProjectRunner.register.size();i++)
 			{
-				System.out.println(TeamProjectRunner.studentRoster.get(i));
+				System.out.println(TeamProjectRunner.register.get(i));
 			}
 		}
 		else if(choice==2)
 		{
-			Collections.sort(TeamProjectRunner.studentRoster, new GPASorter());
-			for(int i=0; i<TeamProjectRunner.studentRoster.size(); i++)
+			Collections.sort(TeamProjectRunner.register, new GPASorter());
+			for(int i=0; i<TeamProjectRunner.register.size(); i++)
 			{
-				System.out.println(TeamProjectRunner.studentRoster.get(i)+" GPA: "+GPASorter.CalculateGPA(TeamProjectRunner.studentRoster.get(i)));
+				System.out.println(TeamProjectRunner.register.get(i)+" GPA: "+GPASorter.CalculateGPA(TeamProjectRunner.register.get(i)));
 			}
 		}
 		else if(choice==3)
@@ -53,10 +53,10 @@ public class SortStudent
 		}
 		else
 		{
-			Collections.sort(TeamProjectRunner.studentRoster, new ProjectSorter());
-			for(int i=0; i<TeamProjectRunner.studentRoster.size();i++)
+			Collections.sort(TeamProjectRunner.register, new ProjectSorter());
+			for(int i=0; i<TeamProjectRunner.register.size();i++)
 			{
-				System.out.println(TeamProjectRunner.studentRoster.get(i));
+				System.out.println(TeamProjectRunner.register.get(i));
 			}
 		}
 	}
