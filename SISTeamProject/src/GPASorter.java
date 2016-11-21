@@ -177,6 +177,6 @@ public class GPASorter implements Comparator<Student>
 		{
 			one=one+0;
 		}
-		return one;
+		return one/3;
 	}
 }
