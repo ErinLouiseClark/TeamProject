@@ -3,18 +3,31 @@ import java.io.*;
 public class TeamProjectRunner {
 
 	static Scanner file;
-	static ArrayList<String> studentRoster = new ArrayList<String>();
-	
-	public static void main(String[] args) throws IOException {	
-		file = new Scanner(new File("studentInformation.txt"));
-		while(TeamProjectRunner.file.hasNext()){
-			studentRoster.add(TeamProjectRunner.file.nextLine());		
-		}			
+	static ArrayList<Student> studentRoster = new ArrayList<Student>();
+	public static void main(String[] args) throws IOException 
+	{	
+		getInformation();
 		welcomeUser();
 		//test
-		//comment
 	}
-	
+	public static void getInformation() throws IOException  
+	{
+		file = new Scanner(new File("studentInformation.txt"));
+		int i=0;
+		while(TeamProjectRunner.file.hasNextLine()){
+			String fN=file.next();
+			String lN=file.next();
+			String fC=file.next();
+			String fG=file.next();
+			String sC=file.next();
+			String sG=file.next();
+			String tC=file.next();
+			String tG=file.next();
+			studentRoster.add(new Student(fN,lN,fC,sG,sC,sG,tC,tG));
+			System.out.println("Student"+(i+1)+": "+studentRoster.get(i));
+			i++;
+		}			
+	}
 	public static void welcomeUser(){
 		System.out.println("Welcome to the class roster!");
 		System.out.println("What would you like to do?");
@@ -30,7 +43,7 @@ public class TeamProjectRunner {
 			
 		}
 		else if(task == 3){
-			
+			SortStudent.choices();
 		}
 		else{
 			System.out.println("That is an invalid option! Try again.");
