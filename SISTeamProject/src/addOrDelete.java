@@ -67,6 +67,7 @@ public class addOrDelete {
 					for(String s : TeamProjectRunner.studentRoster){
 						System.out.println(s);
 					}
+					break;
 				}
 				else if (correct > 2 || correct < 1) {
 					deleteStudent();
