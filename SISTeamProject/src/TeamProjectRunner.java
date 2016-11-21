@@ -7,6 +7,10 @@ public class TeamProjectRunner {
 	static ArrayList<Student> register=new ArrayList<Student>();
 	public static void main(String[] args) throws IOException 
 	{	
+		file = new Scanner(new File("studentInformation.txt"));
+		while(file.hasNext()){
+			studentRoster.add(file.nextLine());
+		}
 		getInformation();
 		welcomeUser();
 		//test
